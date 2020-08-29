@@ -1,0 +1,52 @@
+ALGORITHM num_of_characters
+VAR
+    sentence_to_be_tested : ['t','e','s','t',' ','t','e','s','t',' ','t','e','s','t','.'];
+    sum : INTEGER := 0;
+    i : INTEGER := 0;
+
+BEGIN
+    WHILE (sentence_to_be_tested[i] != '.') DO
+        IF (sentence_to_be_tested[i] != ' ') THEN
+        sum := sum + 1;
+    END_IF
+    i := i + 1;
+    END_WHILE
+END
+
+Write(sum)
+
+
+ALGORITHM num_of_words
+VAR
+    sentence_to_be_tested : ['t','e','s','t',' ','t','e','s','t',' ','t','e','s','t','.'];
+    sum : INTEGER := 1;
+    i : INTEGER := 0;
+
+BEGIN
+    WHILE (sentence_to_be_tested[i] != '.') DO
+        IF (sentence_to_be_tested[i] == ' ') THEN
+        sum := sum + 1;
+    END_IF
+    i := i + 1;
+    END_WHILE
+END
+
+Write(sum)
+
+
+ALGORITHM num_of_vowels
+VAR
+    sentence_to_be_tested : ['t','e','s','t',' ','t','e','s','t',' ','t','e','s','t','.'];
+    sum : INTEGER := 0;
+    i : INTEGER := 0;
+
+BEGIN
+    WHILE (sentence_to_be_tested[i] != '.') DO
+        IF (sentence_to_be_tested[i] == 'a' || sentence_to_be_tested[i] == 'e' || sentence_to_be_tested[i] == 'i' || sentence_to_be_tested[i] == 'o' || sentence_to_be_tested[i] == 'u') THEN
+        sum := sum + 1;
+    END_IF
+    i := i + 1;
+    END_WHILE
+END
+
+Write(sum)
